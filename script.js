@@ -55,3 +55,9 @@ console.log(allButtons);
 
 //gets everything that has 'btn' written in class
 document.getElementsByClassName('btn');
+
+// CREATING AND INSERTING ELEMENTS
+
+//creates DOM element and stores it in message
+const message = document.createElement('div');
+message.classList.add('cookie-message');
