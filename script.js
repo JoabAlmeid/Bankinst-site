@@ -42,7 +42,7 @@ console.log(document.body);
 
 //THESE TWO ARE THE MOST USEFUL
 //selects just the first header
-document.querySelector('.header');
+const header = document.querySelector('.header');
 const allSections = document.querySelectorAll('.section');
 console.log(allSections);
 
@@ -61,3 +61,26 @@ document.getElementsByClassName('btn');
 //creates DOM element and stores it in message
 const message = document.createElement('div');
 message.classList.add('cookie-message');
+message.textContent =
+  'We use cookied for improved functionality and analytics.';
+message.innerHTML =
+  'We use cookied for improved functionality and analytics. <button class="btn btn--close--cookie">Got it!</button>';
+
+//the message can't be in two places at once, so it chooses the last
+// header.prepend(message);
+header.append(message);
+
+//a way to copy the element so you can have the same message on the top and bottom of the page:
+// header.append(message.cloneNode(true));
+
+//makes it go before the node(which here is header) and after header
+// header.before(message);
+header.after(message);
+
+// DELETING ELEMENTS
+document
+  .querySelector('.btn--close--cookie')
+  .addEventListener('click', function () {
+    // message.remove();
+    message.parentElement.removeChild(message);
+  });
