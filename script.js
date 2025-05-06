@@ -113,7 +113,7 @@ logo.alt = 'Beautiful minimalist logo';
 console.log(logo.designer);
 //can't show properties created, only official. But you can do it like that to show it
 console.log(logo.getAttribute('designer'));
-//you can even create properties in the HTML
+//you can even create propertie in the HTML
 logo.setAttribute('company', 'Bankist');
 
 const link = document.querySelector('.nav__link--btn');
